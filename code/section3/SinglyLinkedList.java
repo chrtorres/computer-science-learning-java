@@ -52,11 +52,22 @@ public class SinglyLinkedList<E> {
     public boolean isEmpty(){
         return size == 0;
     }
-    // returns (but does not remove) the last element
+    // returns (but does not remove) the first element
     public E first(){
         if (isEmpty()) 
-        return null;
+            return null;
+        return head.getElement();
+    }
+    // returns (but does not remove) the last element
+    public E last(){
+        if (isEmpty()) 
+            return null;
         return tail.getElement();
+    }
+
+    // returns (but does not remove) first Node of the SinglyLinkedList
+    public Node<E> getHead(){
+        return head;
     }
     // update methods
     public void addFirst(E e) {         // adds element to the front of the list
