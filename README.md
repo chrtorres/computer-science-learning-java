@@ -4,16 +4,16 @@ Welcome to the "Introduction to Computer Science" educational repository! This r
 
 ## Table of Contents
 
-- [Introduction to Computer Science](#introduction-to-computer-science)
-- [Programming Fundamentals](#programming-fundamentals)
-- [Data Structures](#data-structures)
-- [Algorithms](#algorithms)
-- [Object-Oriented Programming (OOP)](#object-oriented-programming-oop)
-- [Advanced Data Structures](#advanced-data-structures)
-- [Advanced Algorithms](#advanced-algorithms)
-- [Database Concepts](#database-concepts)
-- [Web Development Basics](#web-development-basics)
-- [Introduction to Artificial Intelligence](#introduction-to-artificial-intelligence)
+- [Introduction to Computer Science](#introduction-to-computer-science-section-1)
+- [Programming Fundamentals](#programming-fundamentals-section-2)
+- [Data Structures](#data-structures-section-3)
+- [Algorithms](#algorithms-section-4)
+- [Object-Oriented Programming (OOP)](#object-oriented-programming-oop-section-5)
+- [Advanced Data Structures](#advanced-data-structures-section-6)
+- [Advanced Algorithms](#advanced-algorithms-section-6)
+- [Database Concepts](#database-concepts-section-7)
+- [Web Development Basics](#web-development-basics-section-8)
+- [Introduction to Artificial Intelligence](#introduction-to-artificial-intelligence-section-9)
 
 ## Introduction to Computer Science (Section 1)
 
