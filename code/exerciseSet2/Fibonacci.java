@@ -28,7 +28,7 @@ public class Fibonacci {
             System.out.println("1");
             for(int i = 2; i <= num; i++){
                 int next = first + second;
-                System.out.println((i-1) + (i-2));
+                System.out.println(next);
                 first = second;
                 second = next;
             }
