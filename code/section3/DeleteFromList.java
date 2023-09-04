@@ -112,7 +112,11 @@ public class DeleteFromList {
             System.out.print("null\n");
         }
 
+<<<<<<< HEAD
         public void delete(E data) {
+=======
+        public void deleteNode(E data) {
+>>>>>>> 60c927e373217d533ab2ff642975bd3ea40e8a5f
             Node<E> currentNode = head;
             Node<E> prevNode = null;
 
@@ -123,9 +127,12 @@ public class DeleteFromList {
 
                     else
                         prevNode.next = currentNode.next;   // if not head, point to next node
+<<<<<<< HEAD
                     
                     if (currentNode ==  tail)
                         tail = prevNode;        // if node to delete is tail, set new tail
+=======
+>>>>>>> 60c927e373217d533ab2ff642975bd3ea40e8a5f
                     size--;                     // adjust size of list
                 }
                 prevNode = currentNode;         // move pointers to traverse the list
@@ -145,7 +152,11 @@ public class DeleteFromList {
         list.traverse();                        // traverse the list to verify insertion
         System.out.println("Size of List before deletion: " + list.size());
 
+<<<<<<< HEAD
         list.delete(6);
+=======
+        list.deleteNode(6);
+>>>>>>> 60c927e373217d533ab2ff642975bd3ea40e8a5f
 
         list.traverse();
         System.out.println("Size of List after deletion: " + list.size());
