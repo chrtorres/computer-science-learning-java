@@ -112,7 +112,30 @@ public class DeleteFromList {
             System.out.print("null\n");
         }
 
-        public void delete(E data) {
+        public void delete(E e){    // delete first instance of an element
+            Node<E> currentNode = head;
+            Node<E> prevNode = null;
+    
+            while (currentNode != null){
+                if (currentNode.element.equals(e)){
+                    if (prevNode == null)
+                        head = currentNode.next;
+                    else
+                        prevNode.next = currentNode.next;
+    
+                    if (currentNode == tail)
+                        tail = prevNode;
+                    size--;
+                    currentNode = null;
+                    return;
+                }
+                prevNode = currentNode;
+                currentNode = currentNode.next;
+    
+            }
+    
+        }
+        public void deleteAll(E data) {     // delete all instances of an element
             Node<E> currentNode = head;
             Node<E> prevNode = null;
 
@@ -148,6 +171,14 @@ public class DeleteFromList {
         list.delete(6);
 
         list.traverse();
-        System.out.println("Size of List after deletion: " + list.size());
+        System.out.println("Size of List after deleting 1st instance: " + list.size());
+
+        list.deleteAll(6);
+
+        list.traverse();
+        System.out.println("Size of List after deleting all instances: " + list.size());
+    
+    
+    
     }
 }
