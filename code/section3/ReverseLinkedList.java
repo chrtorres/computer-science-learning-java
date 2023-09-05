@@ -2,7 +2,9 @@ package section3;
 import java.util.Scanner;
 /*
  * 
- * Here we learn how to create a LinkedList, then reverse the list
+ * Here we learn how to create a LinkedList, then reverse the list with 2 methods:
+ * - Via loop (reverseList())
+ * - Recursively (recursiveReverseList(current, prev))
  * 
  */
 
@@ -45,6 +47,9 @@ class LinkedList<E>{
         return this.size;
     }
 
+    public Node<E> getHead(){
+        return this.head;
+    }
     public void traverse(){
         Node<E> current = head;
 
@@ -76,6 +81,17 @@ class LinkedList<E>{
         }
         head = prevNode;                        // after loop, point to new head
     }
+
+    public void recursiveReverseList(Node<E> currentNode, Node<E> prevNode){
+        if (currentNode == null){               // if we reached the end, exit recursive call
+            head = prevNode;                    // make head point to tail
+            return;
+        }
+
+        Node<E> nextNode = currentNode.getNext();   // store next value in list
+        currentNode.setNext(prevNode);              // set original next to point to prev
+        recursiveReverseList(nextNode, currentNode);    // recursive call
+    }
 }
 
 public class ReverseLinkedList {
@@ -85,17 +101,20 @@ public class ReverseLinkedList {
         LinkedList<Integer> list = new LinkedList<>();
         int num;
 
-        System.out.println("Enter 10 integers to create a LinkedList:");
-        while (list.size() < 10){
+        System.out.println("Enter 5 integers to create a LinkedList:");
+        while (list.size() < 5){
             num = input.nextInt();
             list.addFirst(num);
 
         }
-        // for (int i = 0; i <= 10; i++ )
-        //     list.addFirst(i);
-        list.traverse();
-        list.reverseList();
+
         System.out.println("\nReversed List:");
+        list.traverse();                                            // verify insertion
+        list.reverseList();                                         // reverse the list
+        System.out.println("\nReversed List:");
+        list.traverse();                                            // verify success list reversal
+        list.recursiveReverseList(list.getHead(), null);   // reverse list recursively 
+        System.out.println("\nReverse list back to original:");
         list.traverse();
 
     }

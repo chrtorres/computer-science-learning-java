@@ -11,6 +11,11 @@ import java.util.Scanner;
  * -Create a more advanced version of the search method that returns the index (position) 
  *  of the first occurrence of the element if found, and -1 if the element is not 
  *  in the list.
+ * 
+ * -Given a singly linked list, implement a method findMiddleElement() to find the
+ *  middle element of the list. If there are two middle elements (in case of an even 
+ *  number of elements), return the second middle element. 
+ * 
  */
 
 
@@ -92,6 +97,20 @@ class LinkedList<E>{
         return -1;
     }
 
+    public E findMiddleElement(){
+        Node<E> current = head;
+        int index;
+        if ( size % 2 == 0)             // check for even size
+            index = size/2 + 1;
+        else
+            index = size/2;
+
+        for (int i = 0; i < index; i++)     // iterate through list until middle
+            current = current.getNext();
+            
+        return current.getElement();        // return middle element
+    }
+
     // Update methods
     public void addFirst(E e){          // add element to front of list
         head = new Node<>(e, head);
@@ -136,6 +155,7 @@ public class SearchLinkedList {
         num = input.nextInt();
         System.out.println("Index of element: " + list.searchIndex(num));
 
-
+        System.out.println("The middle element of the list is: " + list.findMiddleElement());
+    
     }
 }
