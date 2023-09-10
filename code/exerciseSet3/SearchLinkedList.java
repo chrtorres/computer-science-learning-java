@@ -1,4 +1,4 @@
-package section3;
+package exerciseSet3;
 import java.util.Scanner;
 /*
  * -Implement a method search(E data) in your LinkedList class that takes an element as
